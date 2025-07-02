@@ -5,6 +5,7 @@ This document guides you through the process of creating a Virtual Private Cloud
 ![alt text](image-1.png)
 
 **Objectives**
+
 Create a VPC.
 
 Create a Public and Private Subnet.
@@ -20,6 +21,7 @@ SSH into the Public EC2 Instance.
 SSH from the Public EC2 Instance to the Private EC2 Instance
 
 **1. Create a VPC**
+
 A Virtual Private Cloud (VPC) provides an isolated network environment in AWS, enabling you to launch AWS resources in a virtual network that you define.
 
 Navigate to the VPC Console:
@@ -47,6 +49,7 @@ Click "Create VPC".
 
 
 **2. Create Subnets**
+
 Subnets allow you to partition your VPC's IP address range into smaller segments, enabling better management of resources within different availability zones.
 
 Navigate to Subnets:
@@ -83,6 +86,7 @@ Click "Create Subnet".
 
 
 **3. Create an Internet Gateway**
+
 An Internet Gateway allows instances in the VPC to communicate with the internet. It serves as a target for the VPC route tables for internet-routable traffic.
 
 Navigate to Internet Gateways:
@@ -111,6 +115,7 @@ Click "Attach internet gateway".
 
 
 **4. Create Route Tables**
+
 Route tables control the routing of network traffic within your VPC. Public route tables direct traffic to the Internet Gateway, while private route tables handle internal routing.
 
 Navigate to Route Tables:
@@ -182,6 +187,7 @@ Select private-subnet.
 Click "Save associations".
 
 **5. Create Security Group**
+
 Security groups act as a virtual firewall for your EC2 instances to control inbound and outbound traffic. They are essential for defining and enforcing network access rules.
 
 Navigate to Security Groups:
@@ -229,6 +235,7 @@ View the resources map of our vpc (my-vpc)
 
 
 **6. Launch EC2 Instances**
+
 EC2 instances are virtual servers in the cloud, providing scalable computing capacity. Launching instances in public and private subnets allows you to control access and network traffic.
 
 Launch Public EC2 Instance:
@@ -309,6 +316,7 @@ Click "Launch instance".
 
 
 **7. SSH into the Public EC2 Instance**
+
 SSH (Secure Shell) allows you to securely access your EC2 instances. We'll first connect to the public instance from your local machine.
 
 Set Permissions on the Key Pair:
@@ -328,6 +336,7 @@ Run the following command to connect to the instance (replace <ec2-instance-1-pu
 ![alt text](image-2.png)
 
 **8. SSH from the Public EC2 Instance to the Private EC2 Instance**
+
 To access the private EC2 instance, we'll SSH from the public instance using the private key of the private instance.
 
 Copy the content of public key from the directory containing private-key-pair.pem file :
